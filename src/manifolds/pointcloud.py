@@ -33,7 +33,7 @@ class PointCloud:
 
     def s_mean(self, x, x0=None, base=None, step_size=1., max_iter=100, tol=1e-3, debug=False):
         """
-
+        Mean of point clouds.
         :param x: N x M x n x d tensor
         :param x0: N x 1 x n x d tensor
         :return: N x 1 x n x d tensor
@@ -67,7 +67,7 @@ class PointCloud:
 
     def s_geodesic(self, x, y, tau, base=None, step_size=1., max_iter=100, tol=1e-3, debug=False):
         """
-
+        Geodesic path between x and y.
         :param x: N x 1 x n x d tensor
         :param y: N x 1 x n x d tensor
         :param tau: M tensor
@@ -104,7 +104,7 @@ class PointCloud:
 
     def s_exp(self, x, X, c=1 / 4, base=None, step_size=1., max_iter=100, tol=1e-3, debug=False):
         """
-
+        Exponential map of a point cloud.
         :param x: N x 1 x n x d tensor
         :param X: N x 1 x n x d tensor
         :return: N x 1 x n x d tensor
@@ -132,7 +132,7 @@ class PointCloud:
 
     def s_log(self, x, y, asvector=False):
         """
-
+        Logarithm map of a point cloud.
         :param x: N x M x n x d tensor
         :param y: N x M' x n x d tensor
         :param asvector:
@@ -163,7 +163,8 @@ class PointCloud:
 
     def s_prelog(self, x, y, asvector=False):
         """
-
+        Pre-logarithm map of a point cloud.
+        
         :param x: N x M x n x d tensor
         :param y: N x M' x n x d tensor
         :param asvector:
@@ -208,6 +209,7 @@ class PointCloud:
 
     def norm(self, x, X):
         """
+        Norm of a point in the manifold.
 
         :param x: N x M x n x d tensor
         :param X: N x M x L x n x d tensor
@@ -229,6 +231,7 @@ class PointCloud:
     def s_distance(self, x, y):
         """
         Manifold distance between points x and y
+
         :param x: N x M x n x d tensor
         :param y: N x M' x n x d tensor
         :return: N x M x M' tensor
@@ -255,6 +258,7 @@ class PointCloud:
 
     def inner(self, x, X, Y):
         """
+        Inner product of two points in the manifold.
 
         :param x: N x M x n x d tensor
         :param X: N x M x L x n x d tensor
@@ -271,6 +275,7 @@ class PointCloud:
     def pairwise_distances(self, x):
         """
         Function that computes the pairwise distance matrix of a point cloud x
+        
         :param x: N x M x n x d tensor
         :return: N x M x n x n tensor with values [(\|x_i - x_j\|^2)_ij]_NM
         """
