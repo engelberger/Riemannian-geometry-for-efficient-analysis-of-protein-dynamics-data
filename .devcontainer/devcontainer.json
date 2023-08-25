@@ -1,0 +1,16 @@
+{
+    "name": "Riemannian Geometry for Protein Dynamics",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+    },
+    "runArgs": [
+        "--gpus=all"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "ms-python.python"
+    ]
+}
